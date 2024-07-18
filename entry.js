@@ -69,7 +69,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/',(req,res)=>
     {
-        res.sendFile('index.html',{root: path.join(__dirname,'public')}); //load index.html
+        res.sendFile('home.html',{root: path.join(__dirname,'public')}); //load index.html
     });
     
 
