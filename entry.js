@@ -60,7 +60,8 @@ if (setup)
 //uncomment below to run setup first
 //first setup and then setup2 or it may (will fucking) break
 //setup();
-//setup2();    
+//setup2();  
+//update - just use auto method at the beginning of the file  
 
 app.listen(42069) //make it run on localhost:42069
 
@@ -88,7 +89,7 @@ app.post('/',(req,res)=>
             var sx = JSON.stringify("Well, it's complicated"); //just like me and her
             var sx2 = "You don't want to have sex"
         }
-    var command = "INSERT INTO users (login, password, choice) VALUES (" + name + "," + passwd + ","+ sx + ")"; //add name and password to db
+    var command = `INSERT INTO users (login, password, choice) VALUES (${name}, ${passwd}, ${sx}) `; //add name, password and choice to db
     con.query(command, function (err) 
     {
         if (err) throw err
