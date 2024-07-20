@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Tinder For Horses</title>
     </head>
@@ -33,13 +33,15 @@
             top: 50%;
             transform: translate(-50%, 50%);
             padding: 50px;
+            opacity: 0;
         }
         div:hover
         {
             transition: 500ms;
-            -webkit-box-shadow: 10px 7.5px 2px 1.5px #dddddd;
-            -moz-box-shadow: 10px 7.5px 2px 1.5px #dddddd;
-            box-shadow: 10px 7.5px 2px 1.5px #dddddd;
+            -webkit-box-shadow: 15px 15px 0 2.5px #dddddd;
+            -moz-box-shadow: 15px 15px 0 2.5px #dddddd;
+            box-shadow: 15px 15px 0 2.5px #dddddd;
+            opacity: 100;
         }
         input:not(#submitButton)
         {
@@ -57,10 +59,17 @@
         }
         input:is(#submitButton)
         {
-            border: 0.5px solid black;
-            border-radius: 1px;
-            padding: 5px 10px 5px 10px;
-            background-color: rgb(255, 255, 255);
+            border: 0px solid rgb(0, 0, 0);
+            border-radius: 5px;
+            padding: 5px 50px 5px 50px;
+            background-color: rgb(221, 221, 221);
+            transition: 500ms;
+            font-size: 1.1rem;
+        }
+        input:is(#submitButton):hover
+        {
+            transition: 500ms;
+            transform: scale(1.1);
         }
         input:is(#choice)
         {
